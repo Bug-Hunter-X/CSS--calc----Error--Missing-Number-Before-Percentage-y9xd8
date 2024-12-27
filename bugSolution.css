@@ -1,0 +1,11 @@
+The corrected CSS code includes a number before the percentage value in the `calc()` function:
+
+```css
+.element {
+  width: calc(50% + 10px); /*Corrected*/
+  /*or*/
+  width: calc(100% - 10px); /*Another correct example*/
+}
+```
+
+This ensures the calculation is performed correctly and the element is rendered with the expected width.  A common issue is to forget that the percentage is a calculation based on the containing element's width.  The value must be a valid percentage of something.
