@@ -1,0 +1,9 @@
+The following CSS code uses the `calc()` function to calculate the width of an element, but it fails to work as expected because the calculation includes a percentage value without a preceding number:
+
+```css
+.element {
+  width: calc(50% + 10px);
+}
+```
+
+In this code, `50%` is used without a number before it (e.g. it should be `100%` or `50%` instead of just `50%`).  The CSS parser will typically throw an error or ignore the entire `calc()` expression, leading to unexpected layout issues.
